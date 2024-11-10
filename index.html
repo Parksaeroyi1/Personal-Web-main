@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Elijah's personal website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+    
+<body>
+    
+    <!-- Header Section -->
+    <header>
+        <a class="header_home" href="#">elijah</a>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="header_nav">
+            <a href="#about">about me</a>
+            <a href="#projects">projects</a>
+            <a href="#footer">contact</a>
+        </nav>
+
+    </header>
+
+
+
+    <main class="page" id="home">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero_note">Hello, my name is <span>Elijah</span>, a Software Developer (in the making).</h1>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="about_me" id="about">
+            <h3 class="about_heading">About me</h3>
+            <div class="about_me_content">
+                <img src="images/me.jpg" alt="me" class="profile_image">
+                <div class="button"><button onclick="myProfile()">Click for more info</button></div>
+                <div class="text_about">
+                    <p></p>
+                </div>
+            </div>
+        </section>
+
+            
+        <!-- Project Section -->
+        <section class="projects" id="projects">
+            <h3 class="projects_heading">Projects</h3>
+            
+            <div class="random_project">
+                <img class="random_image">
+            </div>
+            
+            <div>
+            <ul class="projects_list">
+
+                <li class="project"> 
+                    <a href="russell_site//russell.html" class="project_link" target="_blank">
+                        <div class="image_container">
+                            <img src="images/russell.jpg" alt="Project 1 Image" class="project_image">
+                            <div class="overlay">RUSSELL!</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="project">
+                    <a href="homers_site/menu.html" class="project_link" target="_blank">
+                        <div class="image_container">
+                            <img src="images/homers.png" alt="Project 2 Image" class="project_image">
+                            <div class="overlay">HOMERS!</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="project">
+                    <a href="rock-paper-scissor/rps.html" class="project_link" target="_blank">
+                        <div class="image_container">
+                            <img src="images/rockpap.jpg" alt="Project 3 Image" class="project_image">
+                            <div class="overlay">ROCK PAPER SCISSORS!</div>
+                        </div>
+                    </a>
+                </li>
+            
+            </ul>
+            </div>
+        
+        </section>
+    </section>
+
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer" id="footer">
+        <h4>Contact Me</h4>
+
+        <div id="overlay" onclick="toggle_visibility()" style="display: none;"></div>
+        <div id="feedback-main" style="display: none;">
+        <button class="close-btn" onclick="toggle_visibility()">×</button>
+        <p>Did you like my website?</p>
+        <!-- Thumbs Up and Thumbs Down Buttons -->
+        <div class="feedback-buttons-container">
+            <button class="thumbs-btn thumbs-up" onclick="handleThumbsUp()">👍</button>
+            <button class="thumbs-btn thumbs-down" onclick="handleThumbsDown()">👎</button>
+        </div>
+        </div>
+    
+    <button class="feedback-button" onclick="toggle_visibility()">Feedback</button>
+
+        <form action="mailto:elijahsuyatt@gmail.com" method="post" enctype="text/plain">
+            <textarea name="message" rows="4" cols="50" placeholder="Write your message here"></textarea><br>
+            <input type="submit" value="Send" onclick="emailSent">
+        </form>
+        <div class="social-links">
+            <a href="https://instagram.com/elijahsuyat" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://linkedin.com/in/elijah-matthew-suyat-681512270" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/Parksaeroyi1" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+<!---feed back, for website or whole project, pop up message after email sent, like this or dislike -->

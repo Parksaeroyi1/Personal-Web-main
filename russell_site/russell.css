@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This makes the body take the full height of the viewport */
+    margin: 0;
+}
+
+
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em; /* Reduced font size */
+    padding: 2rem 10rem 1rem; /* Reduced padding */
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+
+
+.header_nav {
+    display: flex;
+    line-height: 173%;
+    text-align: right;
+    gap: 3.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+   
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 500px;
+}
+
+.video {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    
+    
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+    display: flex; /* Use flexbox to align items */
+}
+
+.biography {
+    flex: 1; /* Allow the biography section to take up available space */
+    margin-right: 20px; /* Space between biography and the image */
+}
+
+.image {
+    margin-right: 20px; /* Space between the image and songs */
+}
+
+.songs {
+    flex-grow: 1; /* Allow the songs section to take up remaining space */
+}
+
+.russell, .songs {
+    flex: 1;
+    padding: 10px;
+
+}
+
+.container {
+    display: flex;
+}

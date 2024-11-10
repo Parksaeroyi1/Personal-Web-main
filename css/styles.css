@@ -1,0 +1,480 @@
+/* Global styles */
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+    padding: 0 100px;
+}
+
+section {
+    scroll-margin-top: 150px; 
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    padding: 2rem;
+    top: 4rem;
+    left: 2rem;
+    right: 2rem;
+    z-index: 1000; 
+    background: black; 
+    border: 2px solid grey;
+    border-radius: 20px;
+    font-size: larger;
+}
+
+.header_home,
+.header_nav a,
+.nav_links a {
+    color: grey;
+    text-decoration: none;
+}
+
+.header_nav a,
+.nav_links a {
+    padding: 0 20px;
+}
+
+.nav_links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 34px;
+    margin-left: auto;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: white;
+    margin-bottom: 6px;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20rem 0 30rem;
+    margin-top: 5rem;
+    width: 100%;
+    height: calc(100vh - 40px);
+    border-bottom: 1px solid white;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.hero h1 span {
+    color: red;
+}
+
+/* About Me and Projects sections */
+.about_me, 
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 15rem;
+    border-bottom: 1px solid white;
+   
+}
+
+.about_heading, 
+.projects_heading {
+    color: grey;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+}
+
+button {
+    display: flex;
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 300px;
+    height: 45px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.about_me_content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.profile_image {
+    width: 100%;
+    max-width: 800px;
+    margin-right: 2rem;
+    border-radius: 20px;
+    border: 2px solid grey;
+}
+
+.text_about {
+    font-size: large;
+    color: white;
+    max-width: 700px;
+    line-height: 2;
+}
+
+.random_project {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+.random_image {
+    width: 532px;
+    max-width: 1000px;
+    height: 400px;
+    border-radius: 20px;
+    border: 2px solid grey;
+    object-fit: cover;
+}
+
+.projects_list {
+    list-style-type: none;
+    display: flex;
+    gap: 24px;
+    flex-wrap: nowrap;
+}
+
+.image_container {
+    position: relative;
+    display: inline-block;
+}
+
+.project_image {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    transition: filter 0.3s ease-in-out;
+    border-radius: 20px;
+    border: 2px solid grey;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image_container:hover .project_image {
+    filter: blur(5px);
+}
+
+.image_container:hover .overlay {
+    opacity: 1;
+}
+
+/* Footer styles */
+.footer {
+    background: black;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer form {
+    margin-bottom: 2rem;
+}
+
+.footer textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+}
+
+.footer input[type="submit"] {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: grey;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    font-size: 1.5rem;
+}
+
+.social-links a:hover {
+    color: white;
+}
+
+.show {
+    display: block !important;
+}
+
+/* Feedback */
+
+.feedback-button {
+    height: 40px;
+    border: solid 3px #CCCCCC;
+    border-radius: 8px;
+    background: #333;
+    width: 100px;
+    line-height: 32px;
+    -webkit-transform: rotate(-90deg);
+    font-weight: 600;
+    color: white;
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    text-align: center;
+    font-size: 17px;
+    position: fixed;
+    right: -40px;
+    top: 45%;
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    z-index: 999;
+  }
+
+  /* Centered modal */
+#feedback-main {
+    width: 300px;
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 1px solid #ccc;
+    background-color: black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Close button in top-right corner */
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Background overlay for blur effect */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px); /* Applies the blur effect */
+    z-index: 1000;
+}
+
+/* Thumbs Up/Down button styles */
+.thumbs-btn {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px; /* Larger font for thumbs */
+    cursor: pointer;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    width: 50px;  /* Fixed size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumbs-up {
+    
+    color: white;
+}
+
+.thumbs-down {
+    
+    color: white;
+}
+
+.thumbs-btn:hover {
+    opacity: 0.8;
+}
+
+/* Container for buttons side by side */
+.feedback-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
+/* Media queries */
+@media (max-width: 1920px) {
+    .profile_image, .project_image {
+        height: 500px;
+    }
+
+    .projects_list {
+        gap: 150px;
+    }
+}   
+
+@media (max-width: 960px) {
+    main {
+        padding: 0 16px;
+        margin-bottom: 20px;
+    }
+
+    .header_home {
+        display: inline-block;
+    }
+
+    header {
+        display: block;
+        margin: 0;
+        padding: 0 16px;
+        width: 94%;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+    }
+
+    .header_nav {
+        display: none;
+    }
+
+    .header_nav a {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    .hamburger {
+        display: inline-block;
+        float: right;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 10px;
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: -10px;
+    }
+
+    .hamburger.active + .nav_links {
+        display: flex;
+    }
+
+    .about_me, 
+    .projects { 
+        padding-bottom: 0;
+    }
+
+    .hero {
+        margin: 0;
+        padding: 0 16px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .projects_list {
+        display: block;
+    }
+
+    .about_me {
+        width: 100%;
+        margin: 0;
+    }
+
+    .about_me_content {
+        display: block;
+    }
+
+    .text_about {
+        margin: 0;
+        padding: 0;
+    }
+
+    .projects {
+        margin: 0;
+    }
+
+    .project_image, 
+    .random_image {
+        height: auto;
+        width: 100%; 
+        max-width: 500px;
+        margin-bottom: 16px;
+    }
+}
