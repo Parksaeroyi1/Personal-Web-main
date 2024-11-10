@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
-    
+       
 <body>
     
     <!-- Header Section -->
@@ -81,7 +81,7 @@
                     </a>
                 </li>
                 <li class="project">
-                    <a href="rock-paper-scissor/rps.html" class="project_link" target="_blank">
+                    <a href="rps/rps.html" class="project_link" target="_blank">
                         <div class="image_container">
                             <img src="images/rockpap.jpg" alt="Project 3 Image" class="project_image">
                             <div class="overlay">ROCK PAPER SCISSORS!</div>
@@ -102,7 +102,9 @@
     <footer class="footer" id="footer">
         <h4>Contact Me</h4>
 
+        <!-- Feedback -->
         <div id="overlay" onclick="toggle_visibility()" style="display: none;"></div>
+
         <div id="feedback-main" style="display: none;">
         <button class="close-btn" onclick="toggle_visibility()">×</button>
         <p>Did you like my website?</p>
@@ -113,8 +115,9 @@
         </div>
         </div>
     
-    <button class="feedback-button" onclick="toggle_visibility()">Feedback</button>
+        <button class="feedback-button" onclick="toggle_visibility()">Feedback</button>
 
+        <!-- Contact Me -->
         <form action="mailto:elijahsuyatt@gmail.com" method="post" enctype="text/plain">
             <textarea name="message" rows="4" cols="50" placeholder="Write your message here"></textarea><br>
             <input type="submit" value="Send" onclick="emailSent">
