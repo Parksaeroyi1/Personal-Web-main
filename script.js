@@ -124,6 +124,8 @@ const handleThumbsDown = () => {
 }
 
 
+// i would like to create a server in the future where data of the feedback is stored
+
 /*fetch('http://127.0.0.1:8000/bio').then(response => {
     return response.json();
   }).then(data => {
