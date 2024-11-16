@@ -107,7 +107,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-bottom: 15rem;
+    padding-bottom: 10rem;
     border-bottom: 1px solid white;
    
 }
@@ -125,28 +125,34 @@ button {
     display: flex;
     background-color: white;
     font-family: 'Inter', sans-serif;
-    margin-bottom: 300px;
     height: 45px;
     width: 100px;
+    margin-top: 25px;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .about_me_content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
 }
 
 .profile_image {
+    display: block;
     width: 100%;
     max-width: 800px;
-    margin-right: 2rem;
     border-radius: 20px;
     border: 2px solid grey;
 }
 
 .text_about {
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 20px;
     font-size: large;
     color: white;
     max-width: 700px;
@@ -273,7 +279,7 @@ button {
     height: 40px;
     border: solid 3px #CCCCCC;
     border-radius: 8px;
-    background: #333;
+    background: black;
     width: 100px;
     line-height: 32px;
     -webkit-transform: rotate(-90deg);
@@ -289,6 +295,7 @@ button {
     top: 45%;
     font-family: "Roboto", helvetica, arial, sans-serif;
     z-index: 999;
+    cursor: pointer;
   }
 
   /* Centered modal */
@@ -365,10 +372,9 @@ button {
 .feedback-buttons-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
 }
-
-
 
 /* Media queries */
 @media (max-width: 1920px) {
@@ -459,6 +465,11 @@ button {
 
     .about_me_content {
         display: block;
+    }
+
+    button {
+        margin-left: 180px;
+        margin-bottom: 20px
     }
 
     .text_about {

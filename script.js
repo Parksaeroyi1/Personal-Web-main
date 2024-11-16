@@ -11,7 +11,7 @@ randomProjectImg.src = randomImage;
 // JSON string containing profile information //
 const jsonAbout = ` { 
     "title": "Elijah Suyat",
-    "about": "I’m currently on my journey to becoming a software developer. Passionate about coding and eager to learn, I am open to new job opportunities where I can grow and contribute to exciting projects.",
+    "about": "I’m currently on my journey to becoming a software developer. Passionate about coding and eager to learn, I am open to new job opportunities where I can grow and contribute to exciting projects. During my free time I like to play sports. I play almost all the sports in the world.",
     "cover_image": "images/me.jpg"
 }`;
 
@@ -79,7 +79,12 @@ projectLinks.forEach(link => {
 const toggle_visibility = () => {
     const feedback = document.getElementById('feedback-main');
     const overlay = document.getElementById('overlay');
-
+    const tally = document.querySelector('.tally')
+    if (tally) {
+        const likes = window.localStorage.getItem("likes") || 0
+        const dislikes = window.localStorage.getItem("dislikes") || 0
+        tally.innerHTML = "likes " + likes + " dislikes " + dislikes;
+    }
     if (feedback && overlay) {
         if (feedback.style.display === 'block') {
             feedback.style.display = 'none';
@@ -90,17 +95,41 @@ const toggle_visibility = () => {
         }
     } else {
         console.error('Element not found');
-    }
-}
+    } 
+};
 
 // Handle Thumbs Up click
 const handleThumbsUp = () => {
-    alert("Thank you for your positive feedback!");
+    const currentLikes = window.localStorage.getItem("likes");
+    if (currentLikes) {
+        window.localStorage.setItem("likes", parseInt (currentLikes) + 1);
+    }
+    else {
+        window.localStorage.setItem("likes", 1);
+    }
     toggle_visibility();  // Hide feedback after voting
 }
 
 // Handle Thumbs Down click
 const handleThumbsDown = () => {
-    alert("Sorry to hear that. We'll try to improve!");
+    const currentDisLikes = window.localStorage.getItem("dislikes");
+    if (currentDisLikes) {
+        window.localStorage.setItem("dislikes", parseInt (currentDisLikes) + 1);
+    }
+    else {
+        window.localStorage.setItem("dislikes", 1);
+    }
+
     toggle_visibility();  // Hide feedback after voting
 }
+
+
+/*fetch('http://127.0.0.1:8000/bio').then(response => {
+    return response.json();
+  }).then(data => {
+    // Work with JSON data here
+    console.log(data);
+  }).catch(err => {
+    // Do something for an error here
+  });
+  */
